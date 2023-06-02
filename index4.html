@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>IntelliBrief</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="utf-8">
+
+    <title>Full Page Header</title>
+
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="main4.css">
+    <script src="script.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+ 
+  
+
+
+<!--
+  SECOND PAGE
+-->
+  <body>
+    <header class="header2">
+      <body>
+
+        <div class="container2">
+          <div class="wrapper2">
+            
+            <header class="head1">Enter Text:</header>
+            <div class="row1">
+            <textarea class="text-area9" id="textarea9" ></textarea>
+           
+           
+            
+            <button class="call-to-action__button9" onclick="createJSON9()" >  Process  </button>
+            
+            
+            
+            <script>
+                  function createJSON9() {
+                    var text = document.getElementById('textarea9').value; // Get the value from the textarea
+
+                    var jsonData = { text }; // Create JSON object
+
+                    // Perform any necessary processing with the JSON data...
+
+                    // Save the JSON data to a variable
+                    var jsonVariable9 = JSON.stringify(jsonData);
+
+//REEEVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNNN
+
+
+                    console.log(jsonVariable9); // Optional: Display the JSON variable in the console
+          
+
+
+              
+                  
+                 
+                  
+                 
+                  }
+
+                  
+
+                 
+
+            </script>
+
+          </div>
+          
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          <div style="width: 5px;"></div> 
+          <div class="wrapper2">
+            
+            <header class="head1">Enter Query:</header>
+            <div class="row1">
+            <textarea class="text-area2" id="textarea2" ></textarea>
+           <button class="sphbutn" id="pasteButton">Paste</button>
+           
+            <button class="call-to-action__button2" id="createBtn" onclick="createJSON()">GET ANSWER</button>
+            <button class="call-to-action__button5" onclick="goToPage2()" >  BACK  </button>
+            <script>
+              function goToPage2() {
+                window.location.href = "index2.html"; 
+              }
+            </script>
+            
+            
+            <script>
+                  function createJSON() {
+                    var text = document.getElementById('textarea2').value; // Get the value from the textarea
+
+                    var jsonData = { text }; // Create JSON object
+
+                    // Perform any necessary processing with the JSON data...
+
+                    // Save the JSON data to a variable
+                    var jsonVariable = JSON.stringify(jsonData);
+
+//REEEVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNNN
+
+
+                    console.log(jsonVariable); // Optional: Display the JSON variable in the console
+                    var jsonVariable1 = jsonVariable.replace(/"text":"/g, '');
+                  var jsonVariable2 = jsonVariable1.replace(/"/g, '');
+                  var jsonVariable3 = jsonVariable2.replace(/{/g, '');
+                  var jsonVariable4 = jsonVariable3.replace(/}/g, '');
+                  
+
+
+              
+                  
+                  
+                  
+                  $(document).ready(function() {
+                  $('#textarea3').val(jsonVariable4); 
+                    });
+                  }
+
+                  
+
+                 
+
+            </script>
+
+          </div>
+          
+          </div>
+          <div style="width: 5px;"></div> 
+           <div class="wrapper2"> 
+            
+            <header class="head1">Answer:</header>
+            <div class="row1">
+            <textarea class="text-area5" id="textarea3" ></textarea>
+            <button class="sphbutn2">Text To Speech</button>
+            <script> 
+              textarea = document.querySelector(".text-area5"),
+              speechBtn = document.querySelector(".sphbutn2");
+
+              let synth = speechSynthesis,
+              isSpeaking = true;
+
+              voices();
+
+              function voices(){
+              for(let voice of synth.getVoices()){
+              let selected = voice.name === "Google UK English Female (en-GB)" ? "selected" : "";
+              let option = `<option value="${voice.name}" ${selected}>${voice.name} (${voice.lang})</option>`;
+              voiceList.insertAdjacentHTML("beforeend", option);
+              }
+              }
+
+              synth.addEventListener("voiceschanged", voices);
+
+              function textToSpeech(text){
+              let utterance = new SpeechSynthesisUtterance(text);
+              for(let voice of synth.getVoices()){
+              if(voice.name === "Google UK English Female (en-GB)"){
+              utterance.voice = voice;
+              }
+              }
+              synth.speak(utterance);
+              }
+
+              speechBtn.addEventListener("click", e =>{
+              e.preventDefault();
+              if(textarea.value !== ""){
+              if(!synth.speaking){
+              textToSpeech(textarea.value);
+              }
+              if(textarea.value.length > 80){
+              setInterval(()=>{
+              if(!synth.speaking && !isSpeaking){
+              isSpeaking = true;
+              speechBtn.innerText = "Convert To Speech";
+              }else{
+              }
+              }, 500);
+              if(isSpeaking){
+              synth.resume();
+              isSpeaking = false;
+              speechBtn.innerText = "Pause Speech";
+              }else{
+              synth.pause();
+              isSpeaking = true;
+              speechBtn.innerText = "Resume Speech";
+              }
+              }else{
+              speechBtn.innerText = "Convert To Speech";
+              }
+              }
+              });
+</script>
+            <script>
+            
+            $(document).ready(function() {
+              $('#textarea3').val(jsonVariable4); 
+            });
+          </script>
+          </div>
+          </div>
+        </div>
+      </body>
+
+        
+
+      
+      
+
+   
+      
+      
+
+    </header>
+
+
+    <!--
+      BAR
+    -->
+    <div class="bar bar--bg">
+      <div class="bar__content ">
+      <span>
+        <h1 class="bar__logo">IntelliBrief</h1>
+
+        
+
+      </span> 
+      <label class="menu-badge">
+        
+        <i class="material-icons">menu</i>
+      </label>
+      </div>
+    </div>
+
+    
+
+
+  </body>
+
+
+</html> 
