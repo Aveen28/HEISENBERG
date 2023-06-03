@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>IntelliBrief</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="utf-8">
+
+    <title>Full Page Header</title>
+
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="main2.css">
+    <script src="script.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+ 
+  
+
+
+<!--
+  SECOND PAGE
+-->
+  <body>
+    <style>
+      /* page2 */
+
+:root {
+  --bar-height:72px;
+  --color-primary: #C33764 ;
+  --color-primary-light: #1D2671;
+  --color-primary-b:#EA8D8D ;
+  --color-primary-light-a: #A890FE;
+  --color-primary-bb:#D8B5FF;
+  --color-primary-light-aa: #1EAE98;
+}
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+
+}
+
+.header2 {
+  height: 100vh;
+  background: linear-gradient(to bottom right, var(--color-primary-b), var(--color-primary-light-a));
+  /*display: flex;
+  align-items: center;
+  */
+  padding-top: var(--bar-height);
+  box-sizing: border-box;
+}
+
+/* Center the container */
+.container2 {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 78vh;
+
+}
+
+/* Style the text areas */
+.text-area2 {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+}
+.text-area5 {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+}
+
+.wrapper2{
+  width: 370px;
+  padding: 25px 30px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 7px 7px 20px rgba(0,0,0,0.05);
+}
+
+
+.wrapper2 .head1{
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  background: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-light));
+  -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    
+    }
+.row1 textarea{
+  resize: none;
+  height: 200px;
+  font-size: 15px;
+  padding: 8px 10px;
+  border: 1px solid #999;
+}
+.row .text-area2::-webkit-scrollbar{
+  width: 0px;
+}
+
+.row1 .outer{
+  height: 47px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  border: 1px solid #999;
+}
+
+.call-to-action__button2{
+  background: #ffffff;
+  outline: none;
+  font: bold 1.1em 'Quicksand',sans-serif;
+  color: var(--color-primary);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+  
+  transition: background 0.15s, color 0.15s;
+  position: absolute; 
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 219px;
+  
+}
+.call-to-action__button7{
+  background: #ffffff;
+  outline: none;
+  font: bold 1.1em 'Quicksand',sans-serif;
+  color: var(--color-primary);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+  
+  transition: background 0.15s, color 0.15s;
+  position: absolute; 
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0px;
+  
+}
+.call-to-action__button7:hover {
+  background: transparent;
+  color: #ffffff;
+}
+.call-to-action__button5{
+  background: #ffffff;
+  outline: none;
+  font: bold 1.1em 'Quicksand',sans-serif;
+  color: var(--color-primary);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+  
+  transition: background 0.15s, color 0.15s;
+  position: absolute; 
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: -225px;
+  
+}
+.call-to-action__button2:hover {
+  background: transparent;
+  color: #ffffff;
+}
+.call-to-action__button5:hover {
+  background: transparent;
+  color: #ffffff;
+}
+.bar{
+  position: fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  width:100%;
+
+  height: var(--bar--height);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: background 0.15s;
+}
+.bar--bg{
+  background: linear-gradient(to bottom right, var(--color-primary-b), var(--color-primary-light-a));
+}
+.bar__content{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.bar__logo{
+  height: 100%;
+  margin-right: auto; /* Move the logo to the left */
+  color: #ffffff;
+}
+.menu-badge {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #ffffff; /* Set the menu badge color to white */
+}
+
+.menu-badge i {
+  margin-left: 8px; /* Add spacing between the menu badge and the material-icon */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.sphbutn{
+  height: 52px;
+  color: #ffffff;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 10px;
+  background:linear-gradient(to bottom right, var(--color-primary-b), var(--color-primary-light-a));
+  transition: background 0.15s, color 0.15s;
+  margin-left: 145px;
+  outline: none;
+  font: bold 1.1em 'Quicksand',sans-serif;
+  border: 1px solid #ffffff;
+border-radius: 4px;
+padding: 10px 16px;
+cursor: pointer;
+
+}
+.sphbutn:hover {
+  background: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-light));
+  color: #ffffff;
+  }
+
+  .sphbutn2{
+    height: 52px;
+    color: #ffffff;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+    background:linear-gradient(to bottom right, var(--color-primary-b), var(--color-primary-light-a));
+    transition: background 0.15s, color 0.15s;
+    margin-left: 107px;
+    outline: none;
+    font: bold 1.1em 'Quicksand',sans-serif;
+    border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+  
+  }
+  .sphbutn2:hover {
+    background: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-light));
+    color: #ffffff;
+    }
+    </style>
+    <header class="header2">
+      <body>
+
+        <div class="container2">
+          <div class="wrapper2">
+            
+            <header class="head1">Enter Text To Be Summarized:</header>
+            <div class="row1">
+            <textarea  class="text-area2" id="variable" ></textarea>
+           <button class="sphbutn" id="pasteButton">Paste</button>
+           
+            <button class="call-to-action__button2" id="createBtn" onclick="createJSON()">SUMMARIZE</button>
+            <script>
+              document.getElementById("createBtn").addEventListener("click", function(event) {
+                  event.preventDefault(); // Prevent the form from submitting normally
+                  
+                  // Get the value from the textarea
+                  var variable = document.getElementById("variable").value;
+      
+                  // Send the variable value to the Flask route
+                  fetch("/display", {
+                      method: "POST",
+                      headers: {
+                          "Content-Type": "application/x-www-form-urlencoded"
+                      },
+                      body: "variable=" + encodeURIComponent(variable)
+                  })
+                  .then(function(response) {
+                      if (response.ok) {
+                          return response.text();
+                      } else {
+                          throw new Error("Error: " + response.status);
+                      }
+                  })
+                  .then(function(data) {
+                      document.open();
+                      document.write(data);
+                      document.close();
+                  })
+                  .catch(function(error) {
+                      console.log(error);
+                  });
+              });
+      
+             
+          </script>
+                      <script>
+                        document.getElementById("createBtn").addEventListener("click", function(event) {
+                            event.preventDefault(); // Prevent the form from submitting normally
+                            
+                            // Get the value from the textarea
+                            var variable = document.getElementById("variable").value;
+                
+                            // Send the variable value to the Flask route
+                            fetch("/index1", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/x-www-form-urlencoded"
+                                },
+                                body: "variable=" + encodeURIComponent(variable)
+                            })
+                            .then(function(response) {
+                                if (response.ok) {
+                                    return response.text();
+                                } else {
+                                    throw new Error("Error: " + response.status);
+                                }
+                            })
+                            .then(function(data) {
+                                document.open();
+                                document.write(data);
+                                document.close();
+                            })
+                            .catch(function(error) {
+                                console.log(error);
+                            });
+                        });
+                
+                       
+                    </script>
+
+            <button class="call-to-action__button5"  id="myButton4">  QUERY  </button>
+            <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                  document.getElementById("myButton4").addEventListener("click", function() {
+                      window.location.href = "{{ url_for('index_4') }}";
+                  });
+              });
+          </script>
+            <button class="call-to-action__button7" id="myButton6" >  BACK  </button>
+            <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                  document.getElementById("myButton6").addEventListener("click", function() {
+                      window.location.href = "{{ url_for('index_1') }}";
+                  });
+              });
+          </script>
+            <script>
+              function goToPage11() {
+                window.location.href = "index1.html"; 
+              }
+            </script>
+            <script>
+              function goToPage2() {
+                window.location.href = "index4.html"; 
+              }
+            </script>
+            
+            
+            <script>
+
+                  
+
+
+                  //reeeeeeevaaaaaaan****************************
+                  
+                  
+                  
+                  $(document).ready(function() {
+                  $('#textarea2').val('{{data}}'); 
+                    });
+                    
+                  
+
+                  
+
+                 
+
+            </script>
+          
+          </div>
+          
+          </div>
+          <div style="width: 15px;"></div> 
+           <div class="wrapper2"> 
+            
+            <header class="head1">Summarized Text:</header>
+            <div class="row1">
+            <textarea class="text-area5" id="textarea3" ></textarea>
+            <button class="sphbutn2">Text To Speech</button>
+            <script> 
+              textarea = document.querySelector(".text-area5"),
+              speechBtn = document.querySelector(".sphbutn2");
+
+              let synth = speechSynthesis,
+              isSpeaking = true;
+
+              voices();
+
+              function voices(){
+              for(let voice of synth.getVoices()){
+              let selected = voice.name === "Google UK English Female (en-GB)" ? "selected" : "";
+              let option = `<option value="${voice.name}" ${selected}>${voice.name} (${voice.lang})</option>`;
+              voiceList.insertAdjacentHTML("beforeend", option);
+              }
+              }
+
+              synth.addEventListener("voiceschanged", voices);
+
+              function textToSpeech(text){
+              let utterance = new SpeechSynthesisUtterance(text);
+              for(let voice of synth.getVoices()){
+              if(voice.name === "Google UK English Female (en-GB)"){
+              utterance.voice = voice;
+              }
+              }
+              synth.speak(utterance);
+              }
+
+              speechBtn.addEventListener("click", e =>{
+              e.preventDefault();
+              if(textarea.value !== ""){
+              if(!synth.speaking){
+              textToSpeech(textarea.value);
+              }
+              if(textarea.value.length > 80){
+              setInterval(()=>{
+              if(!synth.speaking && !isSpeaking){
+              isSpeaking = true;
+              speechBtn.innerText = "Convert To Speech";
+              }else{
+              }
+              }, 500);
+              if(isSpeaking){
+              synth.resume();
+              isSpeaking = false;
+              speechBtn.innerText = "Pause Speech";
+              }else{
+              synth.pause();
+              isSpeaking = true;
+              speechBtn.innerText = "Resume Speech";
+              }
+              }else{
+              speechBtn.innerText = "Convert To Speech";
+              }
+              }
+              });
+</script>
+          
+          </div>
+          </div>
+        </div>
+      </body>
+
+        
+
+      
+      
+
+   
+      
+      
+
+    </header>
+
+
+    <!--
+      BAR
+    -->
+    <div class="bar bar--bg">
+      <div class="bar__content ">
+      <span>
+        <h1 class="bar__logo">IntelliBrief</h1>
+
+        
+
+      </span> 
+      <label class="menu-badge">
+        
+        <i class="material-icons">menu</i>
+      </label>
+      </div>
+    </div>
+
+    
+
+
+  </body>
+
+
+</html> 
